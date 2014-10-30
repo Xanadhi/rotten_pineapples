@@ -2,7 +2,9 @@
 
 <% @users.each do |user| %>
 <div class="user_list">
-  <%= user.full_name %>
+  <%= user.full_name %> (Admin: <%= user.admin? %>)
   </div>
 <% end %>
 
+
+<%= link_to "Create a new user", new_admin_user_path %>
