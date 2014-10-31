@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
 
+  get '/search', to: 'movies#search'
+  
   resources :movies do
     resources :reviews, only: [:new, :create]
   end

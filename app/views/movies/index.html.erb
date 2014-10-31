@@ -1,8 +1,35 @@
-<h1>Rotten Pineapples</h1>
-<%= link_to "Submit a movie!", new_movie_path %>
+<h1>Fresh Papaya</h1>
+<%= link_to "Back to index", movies_path %> | <%= link_to "Submit a movie!", new_movie_path %>
+<hr>
+
+
+<%= form_tag("/search", method: "get") do %>
+<div>
+  <%= label_tag(:title, "Title:") %>
+  <%= text_field_tag(:title) %>
+</div>
+<div>
+  <%= label_tag(:director, "Director:") %>
+  <%= text_field_tag(:director) %>
+</div>
+<div>
+  <%= label_tag(:duration, "Duration:") %>
+  <%= select_tag(:duration, 
+  options_for_select([
+    ['Under 90 minutes', 1],
+    ['Between 90 and 120 minutes', 2],
+    ['Over 120 minutes', 3]
+    ])) %>
+</div>
+  <%= submit_tag("Search") %>
+<% end %>
+
+
 <hr>
 <% @movies.each do |movie| %>
+  <div class="movie-poster">
   <%= link_to image_tag(movie.image_url.to_s), movie_path(movie) %>
+  </div>
   <h2><%= link_to movie.title, movie_path(movie) %></h2>
   <h3><%= formatted_date(movie.release_date) %></h3>
   <h4>Dir. <%= movie.director %> | <%= movie.runtime_in_minutes %> minutes</h4>
