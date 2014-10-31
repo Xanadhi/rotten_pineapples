@@ -40,3 +40,4 @@ gem 'pry', group: [:development, :test]
 
 gem 'carrierwave'
 gem "rmagick"
+gem 'kaminari'

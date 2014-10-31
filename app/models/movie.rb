@@ -23,18 +23,16 @@ class Movie < ActiveRecord::Base
 
   mount_uploader :image, ImageUploader
 
-  scope :find_by_title, -> (title) { 
-    where("title LIKE ?", "%#{title}%") 
+  scope :find_by_keyword, -> (search) { 
+    where("title LIKE :search 
+      OR director LIKE :search", {:search => "%#{search}%"}) 
   }
-  scope :find_by_director, -> (director) {
-    where("director LIKE ?", "%#{director}%")
-  }
- 
+
   def review_average
     reviews.sum(:rating_out_of_ten)/reviews.size
   end
 
-  def self.search(title, director, duration)
+  def self.search(search, duration)
 
     case duration.to_i
     when 1
@@ -47,10 +45,10 @@ class Movie < ActiveRecord::Base
       runtime = ""
     end
 
-    if title.empty? && director.empty?
+    if search.empty?
       where(runtime)
     else
-      find_by_title(title).find_by_director(director).where(runtime)
+      find_by_keyword(search).where(runtime)
     end
 
   end

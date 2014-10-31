@@ -22,6 +22,13 @@ class Admin::UsersController < ApplicationController
       end
     end
 
+    def edit
+    end
+
+    def destroy
+    end
+
+
     protected
 
     def user_params
