@@ -27,6 +27,27 @@ class Movie < ActiveRecord::Base
     reviews.sum(:rating_out_of_ten)/reviews.size
   end
 
+  def self.search(title, director, duration)
+
+    case duration.to_i
+    when 1
+      runtime = "runtime_in_minutes < 90"
+    when 2
+      runtime = "runtime_in_minutes > 90 AND runtime_in_minutes < 120"
+    when 3
+      runtime = "runtime_in_minutes > 120"
+    else
+      runtime = ""
+    end
+
+    if title.empty? && director.empty?
+      where(runtime)
+    else
+      where("title LIKE ?", "%#{title}%").where("director LIKE ?", "%#{director}%").where(runtime)
+    end
+
+  end
+
   protected
 
   def release_date_is_in_the_future
