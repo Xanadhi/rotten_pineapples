@@ -1,21 +1,20 @@
 Rails.application.routes.draw do
 
+  root to: 'movies#index'
+
   namespace :admin do
     resources :users
   end
 
-  root to: 'movies#index'
-  
-
   resources :users, only: [:new, :create]
 
-  resources :sessions, only: [:new, :create, :destroy]
-
-  get '/search', to: 'movies#search'
+  resource :session, only: [:new, :create, :destroy]
   
   resources :movies do
     resources :reviews, only: [:new, :create]
   end
+
+  get '/search', to: 'movies#search'
 
 
 
