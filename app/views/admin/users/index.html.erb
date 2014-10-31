@@ -1,10 +1,12 @@
 <h1>Super Secret Admin Page</h1>
 
+
+
 <% @users.each do |user| %>
 <div class="user_list">
-  <%= user.full_name %> (Admin: <%= user.admin? %>)
+  <%= link_to "#{user.full_name}", admin_user_path(user) %> (Admin: <%= user.admin? %>)
   </div>
 <% end %>
-
-
+<%= paginate @users %>
+<hr>
 <%= link_to "Create a new user", new_admin_user_path %>
