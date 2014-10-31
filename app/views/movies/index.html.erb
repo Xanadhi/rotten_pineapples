@@ -15,11 +15,13 @@
 <div>
   <%= label_tag(:duration, "Duration:") %>
   <%= select_tag(:duration, 
-  options_for_select([
+    options_for_select([
     ['Under 90 minutes', 1],
     ['Between 90 and 120 minutes', 2],
     ['Over 120 minutes', 3]
-    ])) %>
+    ]), 
+    prompt: "Please select a duration:"
+    ) %>
 </div>
   <%= submit_tag("Search") %>
 <% end %>
