@@ -36,11 +36,11 @@ class Movie < ActiveRecord::Base
 
     case duration.to_i
     when 1
-      runtime = "runtime_in_minutes < 90"
+      runtime = "runtime_in_minutes <= 90"
     when 2
       runtime = "runtime_in_minutes > 90 AND runtime_in_minutes < 120"
     when 3
-      runtime = "runtime_in_minutes > 120"
+      runtime = "runtime_in_minutes >= 120"
     else
       runtime = ""
     end

@@ -1,10 +1,34 @@
+<% content_for :title do %>Fresh Papaya - Home<% end %>
+<% content_for :description do %>Fresh, juicy movie reviews<% end %>
+
+<div class="icon-bar four-up">
+  <a class="item">
+    <%= image_tag "svgs/fi-home.svg" %>
+    <label>Home</label>
+  </a>
+  <a class="item">
+    <%= image_tag "svgs/fi-heart.svg" %>
+    <label>About</label>
+  </a>
+  <a class="item">
+    <%= image_tag "svgs/fi-pencil.svg" %>
+    <label>Reviews</label>
+  </a>
+  <a class="item">
+    <%= image_tag "svgs/fi-mail.svg" %>
+    <label>Contact</label>
+  </a>
+</div>
+
 <h1>Fresh Papaya</h1>
-<%= link_to "Back to index", movies_path %> | <%= link_to "Submit a movie!", new_movie_path %>
+<%= link_to "Submit a movie!", new_movie_path %>
 <hr>
 
 <%= render 'search' %>
 
 <hr>
+<div class="row">
 <% @movies.each do |movie| %>
   <%= render partial: "movie", locals: {movie: movie} %>
 <% end %>
+</div>

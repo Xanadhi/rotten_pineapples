@@ -1,16 +1,27 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Fresh Papaya</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Fresh Papaya" %></title>
+
+    <%= stylesheet_link_tag    "application", media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "application", "vendor/modernizr", 'data-turbolinks-track' => true %>
+    <link rel="stylesheet" href="foundation-icons/foundation-icons.css" />
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+  <div class="row">
+    <div class="large-12 columns">
   <% flash.each do |key, value| %>
     <%= content_tag(:div, value) %>
   <% end %>
-<%= yield %>
-<%= render 'layouts/footer' %>
-</body>
+    <%= yield %>
+    <%= javascript_include_tag "application" %>
+    <%= render 'layouts/footer' %>
+    </div>
+  </div>
+  </body>
 </html>

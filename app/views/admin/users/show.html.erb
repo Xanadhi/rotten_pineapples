@@ -2,5 +2,6 @@
 
 Email: <%= @user.email %><br>
 Admin: <%= @user.admin? %><br>
-Created at: <%= @user.created_at %>
-
+Created at: <%= @user.created_at %><br>
+<%= link_to "Edit details", edit_admin_user_path(@user) %><br>
+<%= link_to "Delete user", admin_user_path(@user), method: :delete, :data => {:confirm => 'Are you sure?'} %>
