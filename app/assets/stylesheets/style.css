@@ -1,0 +1,13 @@
+/* These are my styles! */
+
+.title-header {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.papaya-skin {
+  border-left: 2px dashed green;
+  border-right: 2px dashed green;
+}

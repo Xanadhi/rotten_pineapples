@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Pacifico);
+
 // Foundation by ZURB
 // foundation.zurb.com
 // Licensed under MIT Open Source
@@ -55,7 +57,7 @@
 // $rem-base: 16px;
 
 // Allows the use of rem-calc() or lower-bound() in your settings
-@import "foundation/_functions";
+@import "foundation/functions";
 
 // The default font-size is set to 100% of the browser style sheet (usually 16px)
 // for compatibility with browser-based text zoom or user-set defaults.
@@ -108,7 +110,7 @@ $include-html-global-classes: $include-html-classes;
 // $snow        : #F9F9F9;
 // $vapor       : #F6F6F6;
 // $white-smoke : #F5F5F5;
-// $silver      : #EFEFEF;
+   $silver      : #EFEFEF;
 // $smoke       : #EEEEEE;
 // $gainsboro   : #DDDDDD;
 // $iron        : #CCCCCC;
@@ -122,6 +124,7 @@ $include-html-global-classes: $include-html-classes;
 // $oil         : #333333;
 // $jet         : #222222;
 // $black       : #000000;
+   $papaya      : #FFA347;
 
 // We use these to control various global styles
 // $body-bg: $white;
@@ -191,21 +194,20 @@ $include-html-global-classes: $include-html-classes;
 
 // e. Typography
 // - - - - - - - - - - - - - - - - - - - - - - - - -
-
 // $include-html-type-classes: $include-html-classes;
-
+  
 // We use these to control header font styles
-// $header-font-family: $body-font-family;
+   $header-font-family: 'Pacifico', cursive;
 // $header-font-weight: $font-weight-normal;
 // $header-font-style: normal;
 // $header-font-color: $jet;
-// $header-line-height: 1.4;
+   $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;
 // $header-text-rendering: optimizeLegibility;
 
 // We use these to control header font sizes
-// $h1-font-size: rem-calc(44);
+   $h1-font-size: rem-calc(45);
 // $h2-font-size: rem-calc(37);
 // $h3-font-size: rem-calc(27);
 // $h4-font-size: rem-calc(23);
@@ -683,7 +685,7 @@ $include-html-global-classes: $include-html-classes;
 
 // We use these to style the icon-bar and items
 // $include-html-icon-bar-classes: $include-html-classes;
-// $icon-bar-bg: $oil;
+   $icon-bar-bg: $papaya;
 // $icon-bar-font-color: $white;
 // $icon-bar-font-size: 1rem;
 // $icon-bar-hover-color: $primary-color;

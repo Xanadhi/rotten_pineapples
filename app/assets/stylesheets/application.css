@@ -12,5 +12,11 @@
  *
  *= require_tree .
  *= require_self
- *= require foundation
+ *= require foundation_and_overrides
+ *= require style
  */
+
+/*h1 {
+  font-family: 'Pacifico', cursive;
+}
+*/
