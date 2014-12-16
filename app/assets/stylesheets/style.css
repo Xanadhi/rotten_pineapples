@@ -5,9 +5,34 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 35%;
+  transition: all 1s ease;
+}
+
+h1:hover {
+  color: green;
 }
 
 .papaya-skin {
-  border-left: 2px dashed green;
-  border-right: 2px dashed green;
+
+}
+
+.papaya-left {
+  position: fixed;
+  background-image: url("http://www.skyhdwallpaper.com/wp-content/uploads/2014/10/Papaya-Pic.jpg");
+  background-attachment: fixed;
+  width: 300px;
+  height: 1000px;
+  margin-left: -215px;
+}
+
+.papaya-right {
+  position: relative;
+  float: right;
+  background-image: url("http://i.imgur.com/IztnStc.jpg");
+  background-attachment: fixed;
+  width: 300px;
+  height: 2500px;
+  margin-top: -1602px;
+  margin-right: -215px;
 }

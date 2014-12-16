@@ -15,13 +15,18 @@
 
   <body>
   <div class="row">
-    <div class="large-12 columns papaya-skin">
+    <div class="small-1 columns papaya-left">
+    </div>
+    <div class="small-10 small-centered columns papaya-skin">
   <% flash.each do |key, value| %>
     <%= content_tag(:div, value) %>
   <% end %>
+    <%= render 'layouts/header' %>
     <%= yield %>
     <%= javascript_include_tag "application" %>
     <%= render 'layouts/footer' %>
+    </div>
+    <div class="small-1 columns papaya-right">
     </div>
   </div>
   </body>

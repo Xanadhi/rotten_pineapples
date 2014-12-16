@@ -1,28 +1,10 @@
 <% content_for :title do %>Fresh Papaya - Home<% end %>
 <% content_for :description do %>Fresh, juicy movie reviews<% end %>
 
-<div class="icon-bar four-up">
-  <a class="item" href="/">
-    <%= image_tag "svgs/fi-home.svg" %>
-    <label>Home</label>
-  </a>
-  <a class="item">
-    <%= image_tag "svgs/fi-heart.svg" %>
-    <label>Submit</label>
-  </a>
-  <a class="item">
-    <%= image_tag "svgs/fi-pencil.svg" %>
-    <label>Reviews</label>
-  </a>
-  <a class="item">
-    <%= image_tag "svgs/fi-mail.svg" %>
-    <label>Contact</label>
-  </a>
-</div>
+<div class="title-header pop"><h1>Fresh Papaya</h1></div>
 
-<div class="title-header"><h1>Fresh Papaya</h1></div>
-<%= link_to "Submit a movie!", new_movie_path %>
-<hr>
+</br>
+<p>Serving up delicious and fresh movie reviews! This site was built on Ruby on Rails as part of a learning assignment at Lighthouse Labs. To play around as an admin, log in with transient.tran (at gmail.com) with password 123456.</p>
 
 <%= render 'search' %>
 
