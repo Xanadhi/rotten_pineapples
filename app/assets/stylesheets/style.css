@@ -6,11 +6,14 @@
   margin-left: auto;
   margin-right: auto;
   width: 35%;
-  transition: all 1s ease;
+}
+
+h1 {
+  transition: color 1s ease;
 }
 
 h1:hover {
-  color: green;
+  color: rgb(68, 249, 112);
 }
 
 .papaya-skin {
@@ -18,21 +21,34 @@ h1:hover {
 }
 
 .papaya-left {
+  position: absolute;
+  top: 0;
+  left: -400px;
+}
+
+.papaya-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+/*  width: 400px;
+  margin-right: -84px;*/
+}
+
+.papaya-img {
+  width: 400px;
+  height: auto;
   position: fixed;
+}
+
+.papaya-img-right {
+  width: 400px;
+  height: auto;
+  position: fixed;
+}
+
+/*  position: fixed;
   background-image: url("http://www.skyhdwallpaper.com/wp-content/uploads/2014/10/Papaya-Pic.jpg");
   background-attachment: fixed;
   width: 300px;
   height: 1000px;
-  margin-left: -215px;
-}
-
-.papaya-right {
-  position: relative;
-  float: right;
-  background-image: url("http://i.imgur.com/IztnStc.jpg");
-  background-attachment: fixed;
-  width: 300px;
-  height: 2500px;
-  margin-top: -1602px;
-  margin-right: -215px;
-}
+  margin-left: -215px;*/
