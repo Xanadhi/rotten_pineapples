@@ -1,15 +1,7 @@
 <% content_for :title do %>Fresh Papaya - Home<% end %>
 <% content_for :description do %>Fresh, juicy movie reviews<% end %>
 
-<div class='papaya-left'>
-  <%= image_tag('papaya-left.jpg', class: 'papaya-img') %>
-</div>
-
-<div class='papaya-right'>
-  <%= image_tag('papaya-right.jpg', class: 'papaya-img-right') %>
-</div>
-
-<div class="title-header pop"><h1>Fresh Papaya</h1></div>
+  <%= render 'layouts/sidebar' %>
 
 </br>
 <p>Serving up delicious and fresh movie reviews! This site was built on Ruby on Rails as part of a learning assignment at Lighthouse Labs. To play around as an admin, log in with transient.tran (at gmail.com) with password 123456.</p>
