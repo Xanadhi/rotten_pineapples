@@ -1,5 +1,7 @@
 == README
 
+Please note: The database for this project has been erased, so the app is no longer functiniong. However, it is still viewable.
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
