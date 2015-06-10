@@ -1,28 +1,13 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This was one of our assignments at Lighthouse Labs to create a movie-aggregator site in Rails. I decided to take it a little bit further! (also it was originally called rotten_pineapples but I decided that didn't sound so tasty. Welcome to Fresh Papaya!)
 
-Things you may want to cover:
+Images are currently not persisting on the site. I will need to get an AWS account at some point.
 
-* Ruby version
+Dependencies
 
-* System dependencies
+* carrierwave (for uploading)
+* kaminari (pagination)
+* foundation-rails (CSS framework)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Visit the app on: http://fresh-papaya.herokuapp.com/
